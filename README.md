@@ -4,7 +4,13 @@ A plugin to provide TailwindCSS utilities for named grid lines.
 
 ## Installation
 
-TBD - not release on npm yet.
+```
+# npm
+npm install --save-dev @savvywombat/tailwindcss-grid-named-lines
+
+# yarn
+yarn add --dev @savvywombat/tailwindcss-grid-named-lines
+```
 
 ## Usage
 
@@ -12,7 +18,7 @@ Require the plugin into your `tailwindcss.config.js` file:
 
 ```javascript
 // tailwindcss.config.js
-const {namedGridLines} = require('savvywombat/tailwindcss-grid-names')
+const {namedGridLines} = require('@savvywombat/tailwindcss-grid-named-lines')
 
 module.exports = {
   plugins: [
@@ -25,7 +31,7 @@ Now, when adding `gridTemplateColumns` and `gridTemplateRows`, you can name the 
 
 ```javascript
 // tailwindcss.config.js
-const {namedGridLines} = require('savvywombat/tailwindcss-grid-names')
+const {namedGridLines} = require('@savvywombat/tailwindcss-grid-named-lines')
 
 module.exports = {
   theme: {
@@ -84,7 +90,7 @@ These labels do not have any responsive behaviour by themselves. Responsive grid
 
 ```javascript
 // tailwindcss.config.js
-const {namedGridLines} = require('savvywombat/tailwindcss-grid-names')
+const {namedGridLines} = require('@savvywombat/tailwindcss-grid-named-lines')
 
 module.exports = {
   theme: {

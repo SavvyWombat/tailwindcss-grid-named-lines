@@ -1,9 +1,12 @@
 {
-  "name": "tailwindcss-grid-names",
-  "version": "1.0.0",
+  "name": "@savvywombat/tailwindcss-grid-named-lines",
+  "version": "1.1.0",
   "description": "A plugin to provide TailwindCSS utilities for named grid lines.",
   "author": "Stuart Jones <stuart@savvywombat.com.au>",
-  "repository": "https://github.com/savvywombat/tailwindcss-grid-names.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savvywombat/tailwindcss-grid-named-lines.git"
+  },
   "main": "index.js",
   "licence": "MIT",
   "devDependencies": {
@@ -35,5 +38,9 @@
         }
       ]
     ]
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/savvywombat/tailwindcss-grid-named-lines/issues"
+  },
+  "homepage": "https://github.com/savvywombat/tailwindcss-grid-named-lines#readme"
 }
