@@ -1,3 +1,3 @@
 module.exports = {
-  namedGridLines: require('./src/named-grid-lines'),
+  namedGridLines: require('./src/named-grid-lines')(),
 }

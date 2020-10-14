@@ -78,6 +78,27 @@ row-end-footer-bottom
 row-end-bottom
 ```
 
+## Responsiveness
+
+These labels do not have any responsive behaviour by themselves. Responsive grid layouts can be defined using `gridTemplateColumns` and `gridTemplateRows`:
+
+```javascript
+// tailwindcss.config.js
+const {namedGridLines} = require('savvywombat/tailwindcss-grid-names')
+
+module.exports = {
+  theme: {
+    gridTemplateColumns: {
+      'default-layout': '[left] 1fr [gutter-left] 2rem [content-left] calc(768px - 4rem) [content-right] 2rem [gutter-right] 1fr [right]',
+      'small-layout': '[left gutter-left] 1rem [content-left] 1fr [content-right] 1rem [gutter-right right]',
+    },
+    gridTemplateRows: {
+      'default-layout': '[top header-top] 4rem [header-bottom content-top] minmax(1fr, max-content) [content-bottom footer-top] auto [bottom]',
+    }
+  },
+}
+```
+
 ## Licence
 
 [MIT](https://github.com/SavvyWombat/tailwindcss-grid-names/blob/main/LICENSE)

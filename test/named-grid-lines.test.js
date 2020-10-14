@@ -102,7 +102,7 @@ test('multiple templates with different names', () => {
           'grid-row-start': 'fold-2',
         },
       },
-      variants: ['responsive'],
+      variants: [],
     },
     {
       utilities: {
@@ -119,7 +119,15 @@ test('multiple templates with different names', () => {
           'grid-row-end': 'fold-2',
         },
       },
-      variants: ['hover'],
+      variants: [],
+    },
+    {
+      utilities: {},
+      variants: [],
+    },
+    {
+      utilities: {},
+      variants: [],
     },
   ])
 })
