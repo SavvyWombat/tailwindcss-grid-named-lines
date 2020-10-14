@@ -107,6 +107,4 @@ module.exports = {
 
 ## Licence
 
-[MIT](https://github.com/SavvyWombat/tailwindcss-grid-names/blob/main/LICENSE)
-
-
+[MIT](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/LICENSE)
