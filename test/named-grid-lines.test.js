@@ -2,7 +2,7 @@ import _ from 'lodash'
 import escapeClassName from 'tailwindcss/lib/util/escapeClassName'
 import gridRowEnd from 'tailwindcss/lib/plugins/gridRowEnd'
 import gridRowStart from 'tailwindcss/lib/plugins/gridRowStart'
-import plugin from '../src/named-grid-lines'
+import plugin from '../index'
 
 test('multiple templates with different names', () => {
   const addedUtilities = []
@@ -101,11 +101,6 @@ test('multiple templates with different names', () => {
         '.row-start-fold-2': {
           'grid-row-start': 'fold-2',
         },
-      },
-      variants: [],
-    },
-    {
-      utilities: {
         '.row-end-top': {
           'grid-row-end': 'top',
         },
@@ -119,14 +114,6 @@ test('multiple templates with different names', () => {
           'grid-row-end': 'fold-2',
         },
       },
-      variants: [],
-    },
-    {
-      utilities: {},
-      variants: [],
-    },
-    {
-      utilities: {},
       variants: [],
     },
   ])
