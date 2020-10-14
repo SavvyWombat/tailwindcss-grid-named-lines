@@ -14,6 +14,9 @@ test('multiple templates with different names', () => {
         layout: '1fr [top] 1fr [bottom] 1fr',
         multi: '1fr [fold] 1fr [fold] 1fr',
       },
+      gridTemplateColumns: {
+        layout: '1fr [left] 1fr [right] 1fr',
+      },
       gridRowStart: {
         auto: 'auto',
         '1': '1',
@@ -55,7 +58,7 @@ test('multiple templates with different names', () => {
 
   gridRowStart()(pluginApi)
   gridRowEnd()(pluginApi)
-  plugin()(pluginApi)
+  plugin(pluginApi)
 
   expect(addedUtilities).toEqual([
     {
@@ -112,6 +115,18 @@ test('multiple templates with different names', () => {
         },
         '.row-end-fold-2': {
           'grid-row-end': 'fold-2',
+        },
+        '.col-start-left': {
+          'grid-col-start': 'left',
+        },
+        '.col-start-right': {
+          'grid-col-start': 'right',
+        },
+        '.col-end-left': {
+          'grid-col-end': 'left',
+        },
+        '.col-end-right': {
+          'grid-col-end': 'right',
         },
       },
       variants: [],
