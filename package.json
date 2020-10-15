@@ -1,6 +1,6 @@
 {
   "name": "@savvywombat/tailwindcss-grid-named-lines",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A plugin to provide TailwindCSS utilities for named grid lines.",
   "author": "Stuart Jones <stuart@savvywombat.com.au>",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/savvywombat/tailwindcss-grid-named-lines.git"
   },
   "main": "index.js",
-  "licence": "MIT",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
