@@ -14,37 +14,37 @@ module.exports = function ({ addUtilities, target, theme }) {
   const namedGridRows = extractGridLineNames(theme('gridTemplateRows'))
   const namedGridColumns = extractGridLineNames(theme('gridTemplateColumns'))
 
-  const utilities = [
+  const prefixes = [
     {
-      prefix: 'row-start',
+      utility: 'row-start',
       class: 'grid-row-start',
       lines: namedGridRows,
     },
     {
-      prefix: 'row-end',
+      utility: 'row-end',
       class: 'grid-row-end',
       lines: namedGridRows,
     },
     {
-      prefix: 'col-start',
+      utility: 'col-start',
       class: 'grid-col-start',
       lines: namedGridColumns,
     },
     {
-      prefix: 'col-end',
+      utility: 'col-end',
       class: 'grid-col-end',
       lines: namedGridColumns,
     },
   ]
 
-  const namedLines = utilities.reduce((lines, utility) => {
+  const namedLines = prefixes.reduce((lines, prefix) => {
     return {
       ...lines,
       ..._.fromPairs(
-        _.map(utility.lines, (name) => [
-          `.${utility.prefix}-${name}`,
+        _.map(prefix.lines, (name) => [
+          `.${prefix.utility}-${name}`,
           {
-            [utility.class]: name,
+            [prefix.class]: name,
           },
         ])
       ),
