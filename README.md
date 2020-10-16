@@ -18,11 +18,9 @@ Require the plugin into your `tailwindcss.config.js` file:
 
 ```javascript
 // tailwindcss.config.js
-const namedGridLines = require('@savvywombat/tailwindcss-grid-named-lines')
-
 module.exports = {
   plugins: [
-    namedGridLines
+    require('@savvywombat/tailwindcss-grid-named-lines')
   ]
 }
 ```
@@ -31,8 +29,6 @@ Now, when adding `gridTemplateColumns` and `gridTemplateRows`, you can name the 
 
 ```javascript
 // tailwindcss.config.js
-const namedGridLines = require('@savvywombat/tailwindcss-grid-named-lines')
-
 module.exports = {
   theme: {
     gridTemplateColumns: {
@@ -43,7 +39,7 @@ module.exports = {
     }
   },
   plugins: [
-    namedGridLines
+    require('@savvywombat/tailwindcss-grid-named-lines')
   ]
 }
 ```
@@ -90,8 +86,6 @@ These labels do not have any responsive behaviour by themselves. Responsive grid
 
 ```javascript
 // tailwindcss.config.js
-const namedGridLines = require('@savvywombat/tailwindcss-grid-named-lines')
-
 module.exports = {
   theme: {
     gridTemplateColumns: {
@@ -102,6 +96,9 @@ module.exports = {
       'default-layout': '[top header-top] 4rem [header-bottom content-top] minmax(1fr, max-content) [content-bottom footer-top] auto [bottom]',
     }
   },
+  plugins: [
+    require('@savvywombat/tailwindcss-grid-named-lines')
+  ]
 }
 ```
 
