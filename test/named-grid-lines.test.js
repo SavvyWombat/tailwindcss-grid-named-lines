@@ -117,16 +117,16 @@ test('multiple templates with different names', () => {
           'grid-row-end': 'fold-2',
         },
         '.col-start-left': {
-          'grid-col-start': 'left',
+          'grid-column-start': 'left',
         },
         '.col-start-right': {
-          'grid-col-start': 'right',
+          'grid-column-start': 'right',
         },
         '.col-end-left': {
-          'grid-col-end': 'left',
+          'grid-column-end': 'left',
         },
         '.col-end-right': {
-          'grid-col-end': 'right',
+          'grid-column-end': 'right',
         },
       },
       variants: [],

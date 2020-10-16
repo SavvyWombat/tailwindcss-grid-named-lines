@@ -27,12 +27,12 @@ module.exports = function ({ addUtilities, target, theme }) {
     },
     {
       utility: 'col-start',
-      class: 'grid-col-start',
+      class: 'grid-column-start',
       lines: namedGridColumns,
     },
     {
       utility: 'col-end',
-      class: 'grid-col-end',
+      class: 'grid-column-end',
       lines: namedGridColumns,
     },
   ]
