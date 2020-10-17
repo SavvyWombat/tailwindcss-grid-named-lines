@@ -1,5 +1,9 @@
 # TailwindCSS Grid Names
 
+[![Latest Version on NPM](https://img.shields.io/npm/v/@savvywombat/tailwindcss-grid-named-lines)](https://www.npmjs.com/package/@savvywombat/tailwindcss-named-lines)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/LICENSE)
+[![Build](https://img.shields.io/github/workflow/status/SavvyWombat/tailwindcss-grid-named-lines/Test?label=build)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/actions)
+
 A plugin to provide TailwindCSS utilities for named grid lines.
 
 ## Installation
