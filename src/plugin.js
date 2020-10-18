@@ -1,13 +1,8 @@
 const _ = require('lodash')
-const extractGridLineNames = require('./src/util/extractGridLineNames')
+const extractGridLineNames = require('./util/extractGridLineNames')
 
 module.exports = function ({ addUtilities, target, theme }) {
-  if (
-    target('gridRowStart') === 'ie11' ||
-    target('gridRowEnd') === 'ie11' ||
-    target('gridColumnStart') === 'ie11' ||
-    target('gridColumnEnd') === 'ie11'
-  ) {
+  if (target('gridRowStart') === 'ie11') {
     return
   }
 

@@ -1,8 +1,51 @@
 import _ from 'lodash'
 import escapeClassName from 'tailwindcss/lib/util/escapeClassName'
-import gridRowEnd from 'tailwindcss/lib/plugins/gridRowEnd'
-import gridRowStart from 'tailwindcss/lib/plugins/gridRowStart'
-import plugin from '../index'
+import plugin from '../src/plugin'
+
+test('does nothing if set to ie11', () => {
+  const addedUtilities = []
+
+  const config = {
+    target: 'ie11',
+    theme: {
+      gridTemplateRows: {
+        layout: '1fr [top] 1fr [bottom] 1fr',
+        multi: '1fr [fold] 1fr [fold] 1fr',
+      },
+      gridTemplateColumns: {
+        layout: '1fr [left] 1fr [right] 1fr',
+      },
+    },
+    variants: {},
+  }
+
+  const getConfigValue = (path, defaultValue) => _.get(config, path, defaultValue)
+  const pluginApi = {
+    config: getConfigValue,
+    e: escapeClassName,
+    target: () => {
+      return 'ie11'
+    },
+    theme: (path, defaultValue) => getConfigValue(`theme.${path}`, defaultValue),
+    variants: (path, defaultValue) => {
+      if (_.isArray(config.variants)) {
+        return config.variants
+      }
+
+      return getConfigValue(`variants.${path}`, defaultValue)
+    },
+    addUtilities(utilities, variants) {
+      addedUtilities.push({
+        utilities,
+        variants,
+      })
+    },
+  }
+
+  plugin(pluginApi)
+
+  expect(addedUtilities).toEqual([])
+})
 
 test('multiple templates with different names', () => {
   const addedUtilities = []
@@ -17,20 +60,8 @@ test('multiple templates with different names', () => {
       gridTemplateColumns: {
         layout: '1fr [left] 1fr [right] 1fr',
       },
-      gridRowStart: {
-        auto: 'auto',
-        '1': '1',
-      },
-      gridRowEnd: {
-        auto: 'auto',
-        '1': '1',
-        '2': '2',
-      },
     },
-    variants: {
-      gridRowStart: ['responsive'],
-      gridRowEnd: ['hover'],
-    },
+    variants: {},
   }
 
   const getConfigValue = (path, defaultValue) => _.get(config, path, defaultValue)
@@ -56,40 +87,9 @@ test('multiple templates with different names', () => {
     },
   }
 
-  gridRowStart()(pluginApi)
-  gridRowEnd()(pluginApi)
   plugin(pluginApi)
 
   expect(addedUtilities).toEqual([
-    {
-      utilities: [
-        {
-          '.row-start-1': {
-            gridRowStart: '1',
-          },
-          '.row-start-auto': {
-            gridRowStart: 'auto',
-          },
-        },
-      ],
-      variants: ['responsive'],
-    },
-    {
-      utilities: [
-        {
-          '.row-end-2': {
-            gridRowEnd: '2',
-          },
-          '.row-end-1': {
-            gridRowEnd: '1',
-          },
-          '.row-end-auto': {
-            gridRowEnd: 'auto',
-          },
-        },
-      ],
-      variants: ['hover'],
-    },
     {
       utilities: {
         '.row-start-top': {
