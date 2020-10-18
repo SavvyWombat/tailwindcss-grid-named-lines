@@ -1,6 +1,6 @@
 {
   "name": "@savvywombat/tailwindcss-grid-named-lines",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A plugin to provide TailwindCSS utilities for named grid lines.",
   "keywords": ["tailwind", "tailwindcss", "css", "css grid", "css grid lines"],
   "author": "Stuart Jones <stuart@savvywombat.com.au>",
