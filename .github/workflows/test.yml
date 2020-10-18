@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: ${{ matrix.operating-system }}
 
     strategy:
@@ -36,6 +36,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - run: npm install
       - run: npm run test:coverage
 
       - name: Coder coverage
