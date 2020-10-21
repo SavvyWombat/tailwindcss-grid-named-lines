@@ -99,10 +99,10 @@ test('multiple templates with different names', () => {
           'grid-row-start': 'bottom',
         },
         '.row-start-fold-1': {
-          'grid-row-start': 'fold-1',
+          'grid-row-start': 'fold 1',
         },
         '.row-start-fold-2': {
-          'grid-row-start': 'fold-2',
+          'grid-row-start': 'fold 2',
         },
         '.row-end-top': {
           'grid-row-end': 'top',
@@ -111,10 +111,10 @@ test('multiple templates with different names', () => {
           'grid-row-end': 'bottom',
         },
         '.row-end-fold-1': {
-          'grid-row-end': 'fold-1',
+          'grid-row-end': 'fold 1',
         },
         '.row-end-fold-2': {
-          'grid-row-end': 'fold-2',
+          'grid-row-end': 'fold 2',
         },
         '.col-start-left': {
           'grid-column-start': 'left',

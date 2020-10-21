@@ -35,7 +35,7 @@ module.exports = function (gridTemplate) {
           return match
         }
 
-        return `${match}-${counts[match].count++}`
+        return `${match} ${counts[match].count++}`
       })
     })
   )

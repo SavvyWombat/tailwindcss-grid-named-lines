@@ -37,7 +37,7 @@ module.exports = function ({ addUtilities, target, theme }) {
       ...lines,
       ..._.fromPairs(
         _.map(prefix.lines, (name) => [
-          `.${prefix.utility}-${name}`,
+          `.${prefix.utility}-${name.replace(' ', '-')}`,
           {
             [prefix.class]: name,
           },

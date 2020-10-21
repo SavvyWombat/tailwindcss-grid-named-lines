@@ -25,7 +25,7 @@ test('grid lines with the same name are indexed', () => {
     layout: '1fr [column] 1fr [column] 1fr',
   }
 
-  expect(extractGridLineNames(gridTemplateRows)).toEqual(['column-1', 'column-2'])
+  expect(extractGridLineNames(gridTemplateRows)).toEqual(['column 1', 'column 2'])
 })
 
 test('multiple names on the same grid line are valid', () => {
@@ -51,5 +51,5 @@ test('multiple gridTemplates can use the same grid line names', () => {
     multi: '1fr [column] 1fr [column] 1fr',
   }
 
-  expect(extractGridLineNames(gridTemplateRows)).toEqual(['left', 'right', 'column-1', 'column-2'])
+  expect(extractGridLineNames(gridTemplateRows)).toEqual(['left', 'right', 'column 1', 'column 2'])
 })
