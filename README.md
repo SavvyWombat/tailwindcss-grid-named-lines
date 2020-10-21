@@ -1,6 +1,6 @@
 # TailwindCSS Grid Names
 
-[![Latest Version on NPM](https://img.shields.io/npm/v/@savvywombat/tailwindcss-grid-named-lines)](https://www.npmjs.com/package/@savvywombat/tailwindcss--grid-named-lines)
+[![Latest Version on NPM](https://img.shields.io/npm/v/@savvywombat/tailwindcss-grid-named-lines)](https://www.npmjs.com/package/@savvywombat/tailwindcss-grid-named-lines)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/LICENSE)
 [![Build](https://img.shields.io/github/workflow/status/SavvyWombat/tailwindcss-grid-named-lines/Test?label=build)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/actions)
 [![Code Coverage](https://codecov.io/gh/SavvyWombat/tailwindcss-grid-named-lines/branch/main/graph/badge.svg)](https://codecov.io/gh/SavvyWombat/tailwindcss-grid-named-lines)
