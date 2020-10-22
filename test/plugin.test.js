@@ -2,56 +2,10 @@ import _ from 'lodash'
 import escapeClassName from 'tailwindcss/lib/util/escapeClassName'
 import plugin from '../src/plugin'
 
-test('does nothing if set to ie11', () => {
-  const addedUtilities = []
-
-  const config = {
-    target: 'ie11',
-    theme: {
-      gridTemplateRows: {
-        layout: '1fr [top] 1fr [bottom] 1fr',
-        multi: '1fr [fold] 1fr [fold] 1fr',
-      },
-      gridTemplateColumns: {
-        layout: '1fr [left] 1fr [right] 1fr',
-      },
-    },
-    variants: {},
-  }
-
-  const getConfigValue = (path, defaultValue) => _.get(config, path, defaultValue)
-  const pluginApi = {
-    config: getConfigValue,
-    e: escapeClassName,
-    target: () => {
-      return 'ie11'
-    },
-    theme: (path, defaultValue) => getConfigValue(`theme.${path}`, defaultValue),
-    variants: (path, defaultValue) => {
-      if (_.isArray(config.variants)) {
-        return config.variants
-      }
-
-      return getConfigValue(`variants.${path}`, defaultValue)
-    },
-    addUtilities(utilities, variants) {
-      addedUtilities.push({
-        utilities,
-        variants,
-      })
-    },
-  }
-
-  plugin(pluginApi)
-
-  expect(addedUtilities).toEqual([])
-})
-
 test('multiple templates with different names', () => {
   const addedUtilities = []
 
   const config = {
-    target: 'relaxed',
     theme: {
       gridTemplateRows: {
         layout: '1fr [top] 1fr [bottom] 1fr',
@@ -68,9 +22,6 @@ test('multiple templates with different names', () => {
   const pluginApi = {
     config: getConfigValue,
     e: escapeClassName,
-    target: () => {
-      return 'relaxed'
-    },
     theme: (path, defaultValue) => getConfigValue(`theme.${path}`, defaultValue),
     variants: (path, defaultValue) => {
       if (_.isArray(config.variants)) {
