@@ -106,6 +106,67 @@ module.exports = {
   ]
 }
 ```
+## Repeated line names
+
+This plugin will generate numbered utilities when multiple lines share the same name in a `gridTemplateColumns` or `gridTemplateRows` definition:
+
+```javascript
+// tailwindcss.config.js
+module.exports = {
+  theme: {
+    gridTemplateColumns: {
+      'default-layout': '[column-start] 1fr [column-start] 1fr [column-start] 1fr [column-start] 1fr',
+    }
+  }
+}
+```
+
+This will generate the following utilities:
+
+```
+col-start-column-start-1
+col-start-column-start-2
+col-start-column-start-3
+col-start-column-start-4
+
+col-end-column-start-1
+col-end-column-start-2
+col-end-column-start-3
+col-end-column-start-4
+```
+
+Additionally, the plugin will create properly indexed utilities for line names defined inside `repeat()`:
+
+```javascript
+// tailwindcss.config.js
+module.exports = {
+  theme: {
+    gridTemplateColumns: {
+      'default-layout': 'repeat(3, [left] 1fr [right]',
+    }
+  }
+}
+```
+
+This will generate:
+
+```
+col-start-left-1
+col-start-left-2
+col-start-left-3
+
+col-start-right-1
+col-start-right-2
+col-start-right-3
+
+col-end-left-1
+col-end-left-2
+col-end-left-3
+
+col-end-right-1
+col-end-right-2
+col-end-right-3
+```
 
 ## Licence
 
