@@ -52,7 +52,13 @@ test('multiple gridTemplates can use the same grid line names', () => {
     four: '[column] 1fr [column] 1fr [column]',
   }
 
-  expect(extractGridLineNames(gridTemplateRows)).toEqual(['left', 'right', 'column 1', 'column 2', 'column 3'])
+  expect(extractGridLineNames(gridTemplateRows)).toEqual([
+    'left',
+    'right',
+    'column 1',
+    'column 2',
+    'column 3',
+  ])
 })
 
 test('supports repeat', () => {
@@ -76,7 +82,9 @@ test('includes start and end from repeat', () => {
     layout: 'repeat(2, [instart] 1fr [inend])',
   }
 
-  expect(extractGridLineNames(gridTemplateRows)).toEqual(expect.arrayContaining(['instart 1', 'instart 2', 'inend 1', 'inend 2']))
+  expect(extractGridLineNames(gridTemplateRows)).toEqual(
+    expect.arrayContaining(['instart 1', 'instart 2', 'inend 1', 'inend 2'])
+  )
 })
 
 test('supports multiple repeats', () => {
@@ -84,5 +92,7 @@ test('supports multiple repeats', () => {
     layout: 'repeat(2, [line] 1fr) repeat(2, [more] 2fr)',
   }
 
-  expect(extractGridLineNames(gridTemplateRows)).toEqual(expect.arrayContaining(['line 1', 'line 2', 'more 1', 'more 2']))
+  expect(extractGridLineNames(gridTemplateRows)).toEqual(
+    expect.arrayContaining(['line 1', 'line 2', 'more 1', 'more 2'])
+  )
 })

@@ -14,13 +14,15 @@ module.exports = function (gridTemplate) {
         }),
         // extract repeat(n, def)
         ..._.flatMap(value.match(/repeat\([^\)]*\)/g), (repeat) => {
-          const found = repeat.match(/\((?<count>[0-9]+),\s*(\[(?<first>[^\]]+)\])?[^\[]+(\[(?<second>[^\]]+)\])?/)
+          const found = repeat.match(
+            /\((?<count>[0-9]+),\s*(\[(?<first>[^\]]+)\])?[^\[]+(\[(?<second>[^\]]+)\])?/
+          )
 
           if (typeof found.groups.count === 'undefined') {
             return []
           }
 
-          let result = [];
+          let result = []
           // start at 1 here reduce the number of repeated names by one
           // because the first match above will include the names from repeat(n, def)
           for (let i = 1; i < found.groups.count; i++) {
@@ -33,10 +35,11 @@ module.exports = function (gridTemplate) {
           }
 
           return result
-        })
+        }),
       ]
       // create a unique list of names, including counts of how many times that name is used
-      const counts = _.fromPairs(matches
+      const counts = _.fromPairs(
+        matches
           .filter((v, i, a) => a.indexOf(v) === i)
           .map((match) => {
             return [

@@ -142,7 +142,7 @@ Additionally, the plugin will create properly indexed utilities for line names d
 module.exports = {
   theme: {
     gridTemplateColumns: {
-      'default-layout': 'repeat(3, [left] 1fr [right]',
+      'default-layout': 'repeat(3, [left] 1fr [right])',
     }
   }
 }
