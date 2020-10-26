@@ -32,15 +32,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Generate coverage report
+      - name: Publish coverage report
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - run: npm install
       - run: npm run test:coverage
-
-      - name: Coder coverage
-        uses: codecov/codecov-action@v1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          file: coverage/clover.xml
+      - run: bash <(curl -s https://codecov.io/bash)
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
