@@ -18,7 +18,7 @@ module.exports = function (gridTemplate) {
             /\((?<count>[0-9]+),\s*(\[(?<first>[^\]]+)\])?[^\[]+(\[(?<second>[^\]]+)\])?/
           )
 
-          if (typeof found.groups.count === 'undefined') {
+          if (found === null) {
             return []
           }
 

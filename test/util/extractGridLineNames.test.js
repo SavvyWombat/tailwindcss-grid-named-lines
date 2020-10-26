@@ -69,6 +69,15 @@ test('supports repeat', () => {
   expect(extractGridLineNames(gridTemplateRows)).toEqual(['line 1', 'line 2'])
 })
 
+test('ignores badly formatted repeats', () => {
+  const gridTemplateRows = {
+    layout: 'repeat([column] 1fr)',
+    other: 'repeat(, [column] 1fr)',
+  }
+
+  expect(extractGridLineNames(gridTemplateRows)).toEqual(['column'])
+})
+
 test('ignores repeat with no lines', () => {
   const gridTemplateRows = {
     layout: '[outstart] repeat(2, 1fr) [outend]',
