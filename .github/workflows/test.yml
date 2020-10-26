@@ -39,5 +39,5 @@ jobs:
       - run: npm install
       - run: npm run test:coverage
       - run: bash <(curl -s https://codecov.io/bash)
-      env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
