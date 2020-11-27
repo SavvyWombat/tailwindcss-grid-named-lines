@@ -7,7 +7,7 @@
 
 A plugin to provide TailwindCSS utilities for named grid lines.
 
-The latest release of this plugin will work with TailwindCSS versions 1 and 2.
+The latest release of this plugin (version 1.3 onwards) will work with TailwindCSS versions 1 and 2.
 
 ## Installation
 
