@@ -7,6 +7,8 @@
 
 A plugin to provide TailwindCSS utilities for named grid lines.
 
+The latest release of this plugin will work with TailwindCSS versions 1 and 2.
+
 ## Installation
 
 ```
@@ -167,6 +169,10 @@ col-end-right-1
 col-end-right-2
 col-end-right-3
 ```
+
+## Changelog
+
+[Changelog](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/CHANGELOG.md)
 
 ## Licence
 
