@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1 - 2020-12-11
+ * Fixed links for bugs and homepage in package.json.
+
 ## 1.4.0 - 2020-12-11
  * Added npmignore to lighten the package size.
 
