@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0 - 2021-02-23
+ * Fixed dependency for lodash in package.json.
+ * Minor formatting improvements in README.
+ * Remove .idea from npm package.
+
 ## 1.4.1 - 2020-12-11
  * Fixed links for bugs and homepage in package.json.
 

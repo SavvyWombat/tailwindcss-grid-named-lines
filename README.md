@@ -42,7 +42,14 @@ module.exports = {
       'default-layout': '[left] 1fr [gutter-left] 2rem [content-left] calc(768px - 4rem) [content-right] 2rem [gutter-right] 1fr [right]',
     },
     gridTemplateRows: {
-      'default-layout': '[top header-top] 4rem [header-bottom content-top] minmax(1fr, max-content) [content-bottom footer-top] auto [bottom]',
+      'default-layout': 
+        '[top header-top] ' +
+        '4rem ' +
+        '[header-bottom content-top] ' +
+        'minmax(1fr, max-content) ' +
+        '[content-bottom footer-top] ' +
+        'auto ' +
+        '[bottom]',
     }
   },
   plugins: [
@@ -100,7 +107,14 @@ module.exports = {
       'small-layout': '[left gutter-left] 1rem [content-left] 1fr [content-right] 1rem [gutter-right right]',
     },
     gridTemplateRows: {
-      'default-layout': '[top header-top] 4rem [header-bottom content-top] minmax(1fr, max-content) [content-bottom footer-top] auto [bottom]',
+      'default-layout': 
+        '[top header-top] ' +
+        '4rem ' +
+        '[header-bottom content-top] ' +
+        'minmax(1fr, max-content) ' +
+        '[content-bottom footer-top] ' +
+        'auto ' +
+        '[bottom]',
     }
   },
   plugins: [
@@ -173,6 +187,12 @@ col-end-right-3
 ## Changelog
 
 [Changelog](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/CHANGELOG.md)
+
+## Related packages
+
+### [TailwindCSS Grid Areas](https://github.com/SavvyWombat/tailwindcss-grid-areas)
+
+A plugin to provide TailwindCSS utilities for grid areas.
 
 ## Licence
 
