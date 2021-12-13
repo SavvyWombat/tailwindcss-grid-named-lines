@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0 - 2021-12-14
+ * Tested against TailwindCSS v3
+ * Updated minimum node requirements (v12)
+ * Updated documentation
+
 ## 1.5.0 - 2021-02-23
  * Fixed dependency for lodash in package.json.
  * Minor formatting improvements in README.

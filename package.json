@@ -1,6 +1,6 @@
 {
   "name": "@savvywombat/tailwindcss-grid-named-lines",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "A plugin to provide TailwindCSS utilities for named grid lines.",
   "keywords": [
     "tailwind",
@@ -48,7 +48,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "8.9.0"
+            "node": "12.22.0"
           }
         }
       ]
