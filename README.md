@@ -1,11 +1,11 @@
-# TailwindCSS Grid Names
+# Tailwind CSS Grid Names
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/@savvywombat/tailwindcss-grid-named-lines)](https://www.npmjs.com/package/@savvywombat/tailwindcss-grid-named-lines)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/blob/main/LICENSE)
 [![Build](https://img.shields.io/github/workflow/status/SavvyWombat/tailwindcss-grid-named-lines/Test?label=build)](https://github.com/SavvyWombat/tailwindcss-grid-named-lines/actions)
 [![Code Coverage](https://codecov.io/gh/SavvyWombat/tailwindcss-grid-named-lines/branch/main/graph/badge.svg)](https://codecov.io/gh/SavvyWombat/tailwindcss-grid-named-lines)
 
-A plugin to provide TailwindCSS utilities for named grid lines.
+A plugin to provide Tailwind CSS utilities for named grid lines.
 
 ## Installation
 
@@ -27,9 +27,9 @@ See the documentation at https://savvywombat.com.au/tailwind-css/named-grid-line
 
 ## Related packages
 
-### [TailwindCSS Grid Areas](https://github.com/SavvyWombat/tailwindcss-grid-areas)
+### [Tailwind CSS Grid Areas](https://github.com/SavvyWombat/tailwindcss-grid-areas)
 
-A plugin to provide TailwindCSS utilities for grid areas.
+A plugin to provide Tailwind CSS utilities for grid areas.
 
 ## Licence
 
