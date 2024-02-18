@@ -15,7 +15,7 @@ module.exports = function (gridTemplate) {
         // extract repeat(n, def)
         ..._.flatMap(value.match(/repeat\([^\)]*\)/g), (repeat) => {
           const found = repeat.match(
-            /\((?<count>[0-9]+),\s*(\[(?<first>[^\]]+)\])?[^\[]+(\[(?<second>[^\]]+)\])?/
+            /\((?<count>[0-9]+),\s*(\[(?<first>[^\]]+)\])?[^\[]+(\[(?<second>[^\]]+)\])?/,
           );
 
           if (found === null) {
@@ -51,7 +51,7 @@ module.exports = function (gridTemplate) {
                 }, 0),
               },
             ];
-          })
+          }),
       );
 
       // create a list of grid line names for this template, indexing repeated names
@@ -62,6 +62,6 @@ module.exports = function (gridTemplate) {
 
         return `${match} ${counts[match].count++}`;
       });
-    })
+    }),
   );
 };
