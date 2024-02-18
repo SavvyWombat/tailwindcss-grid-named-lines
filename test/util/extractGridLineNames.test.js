@@ -106,7 +106,7 @@ test("includes start and end from repeat", () => {
   };
 
   expect(extractGridLineNames(gridTemplateRows)).toEqual(
-    expect.arrayContaining(["instart 1", "instart 2", "inend 1", "inend 2"])
+    expect.arrayContaining(["instart 1", "instart 2", "inend 1", "inend 2"]),
   );
 });
 
@@ -116,6 +116,6 @@ test("supports multiple repeats", () => {
   };
 
   expect(extractGridLineNames(gridTemplateRows)).toEqual(
-    expect.arrayContaining(["line 1", "line 2", "more 1", "more 2"])
+    expect.arrayContaining(["line 1", "line 2", "more 1", "more 2"]),
   );
 });

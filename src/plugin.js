@@ -37,7 +37,7 @@ module.exports = function ({ addUtilities, theme }) {
           {
             [prefix.class]: name,
           },
-        ])
+        ]),
       ),
     };
   }, {});
